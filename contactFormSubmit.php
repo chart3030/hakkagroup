@@ -11,6 +11,9 @@ $email_address = $_POST["contact_email"];
 $subject = $_POST["contact_subject"];    
 $message = $_POST["contact_message"];
       
+
+echo $name; 
+
 // check that a name was entered  
 if (empty ($name))  
     $error = "You must enter your name.";  
