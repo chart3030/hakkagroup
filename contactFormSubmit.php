@@ -6,7 +6,7 @@ if (!isset($_POST["save"]) || $_POST["save"] != "contact") {
 }  
       
 // get the posted data  
-$name = $_POST["contact_first_name " . "contact_last_name"];  
+$name = $_POST["contact_first_name"]  . " " . $_POST["contact_last_name"];  
 $email_address = $_POST["contact_email"];  
 $subject = $_POST["contact_subject"];    
 $message = $_POST["contact_message"];
