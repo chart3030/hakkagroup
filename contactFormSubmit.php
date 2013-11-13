@@ -6,7 +6,7 @@ if (!isset($_POST["save"]) || $_POST["save"] != "contact") {
 }  
       
 // get the posted data  
-$name = $_POST["contact_first_name " + "contact_last_name"];  
+$name = $_POST["contact_first_name " . "contact_last_name"];  
 $email_address = $_POST["contact_email"];  
 $subject = $_POST["contact_subject"];    
 $message = $_POST["contact_message"];
@@ -33,7 +33,7 @@ if (isset($error)) {
 // write the email content  
 $email_content = "Name: $name\n";  
 $email_content .= "Email Address: $email_address\n";  
-$email_content .= "Subject:\n\n$subject" + "Message:\n\n$message";  
+$email_content .= "Subject:\n\n$subject" . "Message:\n\n$message";  
       
 // send the email  
 mail ("pete@g33ktalk.com", "New Message Hakka Group Site", $email_content);  
