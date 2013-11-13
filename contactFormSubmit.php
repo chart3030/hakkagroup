@@ -12,7 +12,7 @@ $subject = $_POST["contact_subject"];
 $message = $_POST["contact_message"];
       
 
-echo $name; 
+echo "name is: " . $name; 
 
 // check that a name was entered  
 if (empty ($name))  
