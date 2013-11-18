@@ -71,6 +71,6 @@ echo "Success!";
 */
 
 // send the user back to the form  
-header("Location: contact-form.php?s=".urlencode("Thank you for your message.")); exit;  
+header("Location: index.php?s=".urlencode("Thank you for your message.")); exit;  
   
 ?>  
