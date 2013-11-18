@@ -1,6 +1,4 @@
  <?php  
-
- require_once 'Mail.php';
   
 // check for form submission - if it doesn't exist then send back to contact form  
 if (!isset($_POST["save"]) || $_POST["save"] != "contact") {  
@@ -46,8 +44,14 @@ $email_content .= "Subject:\n\n$subject" . "Message:\n\n$message";
       
 // send the email  
 mail ("pete@g33ktalk.com", "New Message Hakka Group Site", $email_content);  
-  
-echo "Success!";
+
+// check if an error was found - if there was, send the user back to the form  
+if (isset($error)) {  
+    //header("Location: index.php?e=".urlencode($error)); exit;
+    echo $error;  
+}  else {
+	echo "Success!";
+}
 
 // send the user back to the form  
 //header("Location: contact-form.php?s=".urlencode("Thank you for your message.")); exit;  
