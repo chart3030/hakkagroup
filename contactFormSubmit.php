@@ -1,4 +1,6 @@
  <?php  
+
+ require_once 'Mail.php';
   
 // check for form submission - if it doesn't exist then send back to contact form  
 if (!isset($_POST["save"]) || $_POST["save"] != "contact") {  
