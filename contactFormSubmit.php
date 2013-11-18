@@ -47,8 +47,7 @@ if (isset($error)) {
 	$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
     $mail->From     = "server@hakkagroup.com";
     $mail->addAddress('pete@g33ktalk.com');  
-    //$mail->Subject  = $subject;
-    //$mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
+    $mail->Subject  = "Info request from hakkagroup.com";
     $mail->Body 		= "name is: " . $name . "\nemail is: " .  $email_address . "\nsubject is: " . $subject . "\nmessage is: " . $message;
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
@@ -72,6 +71,6 @@ echo "Success!";
 */
 
 // send the user back to the form  
-//header("Location: contact-form.php?s=".urlencode("Thank you for your message.")); exit;  
+header("Location: contact-form.php?s=".urlencode("Thank you for your message.")); exit;  
   
 ?>  
