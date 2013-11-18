@@ -53,6 +53,18 @@ if (isset($error)) {
 	echo "Success!";
 }
 
+//TEST MAIL CODE
+   $to = "to@gmail.com";
+   $subject = "This is subject";
+   $message = "This is simple text message.";
+   $header = "From:from@yantranet.com \r\n";
+   $retval = mail ($to,$subject,$message,$header);
+   if( $retval == true ){
+      echo "Message sent successfully...";
+   }else{
+      echo "Message could not be sent...";
+   }
+
 // send the user back to the form  
 //header("Location: contact-form.php?s=".urlencode("Thank you for your message.")); exit;  
   
