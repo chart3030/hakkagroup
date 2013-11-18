@@ -46,11 +46,16 @@ if (isset($error)) {
 
     $mail = new PHPMailer();
     $mail->IsSMTP();  // telling the class to use SMTP
-    $mail->Host     = "smtp.gmail.com"; // SMTP server
-    $mail->From     = "suneetha.itham@gmail.com";
-    $mail->AddAddress("suneetha@yantranet.com");
-    $mail->Subject  = "First PHPMailer Message";
-    $mail->Body     = "Hi! \n\n This is my first e-mail sent through PHPMailer.";
+    $mail->Host     = "smtp.mandrillapp.com"; // SMTP server
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+	$mail->Username = 'app19409613@heroku.com';                            // SMTP username
+	$mail->Password = 'i5dEhc969G4aqgT2tH6k0g';                           // SMTP password
+	$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
+
+    $mail->From     = "server@hakkagroup.com";
+    $mail->AddAddress("server@hakkagroup.com");
+    $mail->Subject  = $subject;
+    $mail->Body     = $email_address . " " . " " . $name . " " $message;
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
         echo 'Message was not sent.';
