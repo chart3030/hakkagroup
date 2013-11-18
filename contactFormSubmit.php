@@ -47,9 +47,9 @@ if (isset($error)) {
 	$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
     $mail->From     = "server@hakkagroup.com";
     $mail->addAddress('pete@g33ktalk.com');  
-    $mail->Subject  = $subject;
+    //$mail->Subject  = $subject;
     //$mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
-    $mail->Body 		= "name is: " . $name . "\nemail is: " .  $email_address . "\nmessage is: " . $message;
+    $mail->Body 		= "name is: " . $name . "\nemail is: " .  $email_address . "\nsubject is: " . $subject . "\nmessage is: " . $message;
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
         echo 'Message was not sent.';
