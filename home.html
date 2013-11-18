@@ -35,6 +35,16 @@
   </div>
 <!---End Hidden Navigation--->
 
+<?php  
+  
+        // check for a successful form post  
+        if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
+  
+        // check for a form error  
+        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";  
+  
+?>  
+
 <!--Page 1-->
 <div id="page1" class="page white-title center">
   <div class="blue-box">
@@ -178,15 +188,7 @@ We develop key initiatives that are outside your traditional recruiting efforts,
        </div>
 
 
-       <?php  
-  
-        // check for a successful form post  
-        if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
-  
-        // check for a form error  
-        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";  
-  
-?>  
+       
        <form class="well span8 offset3" action="contactFormSubmit.php" method="post">
   <div class="row">
     <div class="span3 left">
@@ -199,9 +201,9 @@ We develop key initiatives that are outside your traditional recruiting efforts,
             <label>Subject</label>
       <select id="subject" name="contact_subject" class="span3">
         <option value="na" selected="">Choose One:</option>
-        <option value="service">General Customer Service</option>
-        <option value="suggestions">Suggestions</option>
-        <option value="product">Product Support</option>
+        <option value="services">Let's talk about your services!</option>
+        <option value="engPR">Tell me more about Engineering PR!</option>
+        <option value="feedback">I have juicy feedback for you!</option>
       </select>
     </div>
     <div class="span5 left">
