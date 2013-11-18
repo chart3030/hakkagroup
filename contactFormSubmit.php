@@ -34,7 +34,7 @@ elseif (empty ($message))
 // check if an error was found - if there was, send the user back to the form  
 if (isset($error)) {  
     //header("Location: index.php?e=".urlencode($error)); exit;
-    echo $error;  
+    header("Location: index.php#page5?e=".urlencode("Unfortunately, there was an error. ".$error));
 }  
 
 
