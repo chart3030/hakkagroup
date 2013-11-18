@@ -16,12 +16,6 @@ $name = $_POST["contact_first_name"]  . " " . $_POST["contact_last_name"];
 $email_address = $_POST["contact_email"];  
 $subject = $_POST["contact_subject"];    
 $message = $_POST["contact_message"];
-      
-
-echo "name is: " . $name; 
-echo "email is: " . $email_address; 
-echo "subject is: " . $subject; 
-echo "message is: " . $message; 
 
 
 // check that a name was entered  
@@ -54,8 +48,9 @@ if (isset($error)) {
     $mail->From     = "server@hakkagroup.com";
     $mail->addAddress('pete@g33ktalk.com');  
     $mail->Subject  = $subject;
-//    $mail->Body     = $email_address . " " . " " . $name . " " $message;
-    $mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
+    //$mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
+    $mail->Body 		= "name is: " . $name; . "\nemail is: " .  $email_address; . "\nmessage is: " . $message;
+    
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
         echo 'Message was not sent.';
@@ -63,6 +58,7 @@ if (isset($error)) {
     }else {
         echo 'Message has been sent.';
     }
+
 
 /*          
 // write the email content  
