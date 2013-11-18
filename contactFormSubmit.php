@@ -51,10 +51,12 @@ if (isset($error)) {
     $mail->Body 		= "name is: " . $name . "\nemail is: " .  $email_address . "\nsubject is: " . $subject . "\nmessage is: " . $message;
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
-        echo 'Message was not sent.';
-        echo 'Mailer error: ' . $mail->ErrorInfo;
+        //echo 'Message was not sent.';
+        //echo 'Mailer error: ' . $mail->ErrorInfo;
+        header("Location: index.php#page5?e=".urlencode("Unfortunately, there was an error. Please try again."));
     }else {
-        echo 'Message has been sent.';
+        //echo 'Message has been sent.';
+        header("Location: index.php#page5?s=".urlencode("Thank you for your message."));
     }
 
 
@@ -71,6 +73,6 @@ echo "Success!";
 */
 
 // send the user back to the form  
-header("Location: index.php?s=".urlencode("Thank you for your message.")); exit;  
+//header("Location: index.php?s=".urlencode("Thank you for your message.")); exit;  
   
 ?>  
