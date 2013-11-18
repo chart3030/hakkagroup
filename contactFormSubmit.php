@@ -49,8 +49,7 @@ if (isset($error)) {
     $mail->addAddress('pete@g33ktalk.com');  
     $mail->Subject  = $subject;
     //$mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
-    $mail->Body 		= "name is: " . $name; . "\nemail is: " .  $email_address; . "\nmessage is: " . $message;
-    
+    $mail->Body 		= "name is: " . $name . "\nemail is: " .  $email_address . "\nmessage is: " . $message;
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
         echo 'Message was not sent.';
