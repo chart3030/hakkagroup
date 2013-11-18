@@ -50,7 +50,7 @@ if (isset($error)) {
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
 	$mail->Username = 'app19409613@heroku.com';                            // SMTP username
 	$mail->Password = 'i5dEhc969G4aqgT2tH6k0g';                           // SMTP password
-	$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
+	$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
     $mail->From     = "server@hakkagroup.com";
     $mail->addAddress('pete@g33ktalk.com');  
     $mail->Subject  = $subject;
