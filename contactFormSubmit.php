@@ -51,11 +51,10 @@ if (isset($error)) {
 	$mail->Username = 'app19409613@heroku.com';                            // SMTP username
 	$mail->Password = 'i5dEhc969G4aqgT2tH6k0g';                           // SMTP password
 	$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
-
     $mail->From     = "server@hakkagroup.com";
-    $mail->AddAddress("server@hakkagroup.com");
     $mail->Subject  = $subject;
-    $mail->Body     = $email_address . " " . " " . $name . " " $message;
+//    $mail->Body     = $email_address . " " . " " . $name . " " $message;
+    mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
         echo 'Message was not sent.';
