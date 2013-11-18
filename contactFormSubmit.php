@@ -3,8 +3,7 @@
 //require_once 'Mandrill.php'; //Not required with Composer
 //$mandrill = new Mandrill('i5dEhc969G4aqgT2tH6k0g');
   
-require_once "class.phpmailer.php"
-require_once "class.smtp.php"
+require "PHPMailerAutoload.php"
 
 // check for form submission - if it doesn't exist then send back to contact form  
 if (!isset($_POST["save"]) || $_POST["save"] != "contact") {  
@@ -43,30 +42,6 @@ if (isset($error)) {
     echo $error;  
 }  
 
-$mail = new PHPMailer;
-
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mandrillapp.com';  // Specify main and backup server
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'app19409613@heroku.com';                            // SMTP username
-$mail->Password = 'i5dEhc969G4aqgT2tH6k0g';                           // SMTP password
-$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
-
-$mail->From = 'server@hakkagroup.com';
-$mail->FromName = 'PHPMailer';
-$mail->addAddress('pete@g33ktalk.com');  // Add a recipient
-
-$mail->Subject = $subject
-$mail->Body    = $message
-$mail->AltBody = $name . " " . $email_address . " " . $message
-
-if(!$mail->send()) {
-   echo 'Message could not be sent.';
-   echo 'Mailer Error: ' . $mail->ErrorInfo;
-   exit;
-}
-
-echo 'Message has been sent';
 
 /*          
 // write the email content  
