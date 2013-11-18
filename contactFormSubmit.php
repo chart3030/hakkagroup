@@ -3,7 +3,7 @@
 //require_once 'Mandrill.php'; //Not required with Composer
 //$mandrill = new Mandrill('i5dEhc969G4aqgT2tH6k0g');
   
-require "PHPMailerAutoload.php"
+//require_once "PHPMailerAutoload.php"
 
 // check for form submission - if it doesn't exist then send back to contact form  
 if (!isset($_POST["save"]) || $_POST["save"] != "contact") {  
@@ -41,7 +41,6 @@ if (isset($error)) {
     //header("Location: index.php?e=".urlencode($error)); exit;
     echo $error;  
 }  
-
 
 /*          
 // write the email content  
