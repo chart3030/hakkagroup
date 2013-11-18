@@ -54,7 +54,7 @@ if (isset($error)) {
     $mail->From     = "server@hakkagroup.com";
     $mail->Subject  = $subject;
 //    $mail->Body     = $email_address . " " . " " . $name . " " $message;
-    mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
+    $mail->Body 		= "Hi! \n\n This is my first e-mail sent through PHPMailer.";
     $mail->WordWrap = 50;
     if(!$mail->Send()) {
         echo 'Message was not sent.';
