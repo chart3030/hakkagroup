@@ -17,6 +17,8 @@ $email_address = $_POST["contact_email"];
 $subject = $_POST["contact_subject"];    
 $message = $_POST["contact_message"];
 
+echo "email: " . $email_address; exit;
+
 
 // check that a name was entered  
 if (empty ($name))  
@@ -53,10 +55,10 @@ if (isset($error)) {
     if(!$mail->Send()) {
         //echo 'Message was not sent.';
         //echo 'Mailer error: ' . $mail->ErrorInfo;
-        header("Location: index.php#page5?e=".urlencode("Unfortunately, there was an error. Please try again."));
+        //header("Location: index.php#page5?e=".urlencode("Unfortunately, there was an error. Please try again."));
     }else {
         //echo 'Message has been sent.';
-        header("Location: index.php#page5?s=".urlencode("Thank you for your message."));
+        //header("Location: index.php?s=".urlencode("Thank you for your message."));
     }
 
 
