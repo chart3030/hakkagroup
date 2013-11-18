@@ -13,6 +13,10 @@ $message = $_POST["contact_message"];
       
 
 echo "name is: " . $name; 
+echo "email is: " . $email_address; 
+echo "subject is: " . $subject; 
+echo "message is: " . $message; 
+
 
 // check that a name was entered  
 if (empty ($name))  
