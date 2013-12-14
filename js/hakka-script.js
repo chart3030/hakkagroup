@@ -152,3 +152,12 @@ $win.on('scroll', function() {
   }
   else { $('.navbar-left-top').removeClass('is-visible'); }
 });
+
+$win.on('scroll', function() {
+	if ($win.scrollTop() > 220 ) {
+		$('.navbar-left-top').removeClass('mobile-top'); 
+	}
+	else if ($win.scrollTop() < 250 ) {
+		$('.navbar-left-top').addClass('mobile-top');
+	}
+});
