@@ -112,7 +112,7 @@ HIDDEN NAV STYLES
 }
 
 .navbar-left-top ul li:last-child {
-	padding-right:0;
+	/*padding-right:0;*/
 }
 
 .navbar-left-top ul li a:link,
@@ -319,4 +319,155 @@ Colors and Various
 	text-decoration: none;
 	background-color: #000000;
 	color: #999999;
+}
+.fix-top {
+	top:0;
+	position:absolute;
+}
+/********************************
+Mobile Stuff
+*********************************/
+@media (max-width: 480px) {
+	html, body {
+		overflow-x:hidden;
+	}
+	.conatiner {
+		width:auto;
+	}
+	img {
+		max-width:100%
+	}
+	.navbar-left-top ul li {
+	display:inline;
+	padding: 0em;
+	text-wrap:normal;
+	}
+
+}
+
+@media (max-width: 768px) {
+	body {
+    padding: 0;
+  }
+  h1 {
+	  margin:auto;
+  }
+  
+#scrollToTop {
+	display:none !important;
+}
+  .right {
+	  text-align:center;
+  }
+  
+  .navbar-left {
+		display:none;
+	}
+
+	.navbar-left-top {
+  /*border: medium none;*/
+  margins: 0 auto;
+  position: absolute;
+  top:0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  background-color:#f5f5f5;
+  opacity:;
+  padding:4px 0 0 0;
+  /*-webkit-transition: all 0.2s ease-out;
+  transition:all 0.2s ease-out;*/
+  display:block;
+  box-shadow: none;
+}
+
+.navbar-left-top ul {
+  list-style:none;
+  padding:0;
+  margin:auto;
+}
+
+.navbar-left-top ul li {
+	display:inline;
+	padding: 0.5em;
+	color: #17b7d5;
+   font-family: sans-serif;
+   font-size: 1.2em;
+   font-weight:300;
+	/*position: relative;
+  float: left;*/
+}
+.navbar-left-top ul li:first-child {
+	padding-left:0;
+}
+	.page {}
+
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+		width:auto;
+	}
+	
+	.title {
+	padding:2em 0;
+	height:10em;
+}
+
+.title h1 {
+	font-size:3em;
+	line-height:32px;
+	text-align:center;
+	padding:1em 0 0 0;
+	margin: -30px 0 0 0;
+}
+
+.title h2 {
+	font-size:1.2em;
+	text-align:center;
+	padding:0;
+	line-height:15px;
+	margin: 0;
+}
+
+.white h1 {
+	font-size:2.4em;
+}
+.white h2 {
+	font-size:1.2em;
+	line-height:10px;
+}
+.grey h1 {
+	font-size:2.4em;
+}
+.grey h2 {
+	font-size:1.2em;
+	line-height:10px;
+}
+.blue h1 {
+	font-size:2.4em;
+}
+.blue h2 {
+	font-size:1.2em;
+	line-height:10px;
+}
+.bios h3 {
+	font-size:1.2em;
+	line-height:10px;
+}
+.bios h4 {
+	font-size:2em;
+	line-height:25px;
+}
+
+.para {
+	padding: 2em 0 2em;
+}
+	.page p {
+		text-align: left;
+	}
+.mobile-top {
+		top:0 !important;
+	}
+
+
 }
