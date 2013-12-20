@@ -345,6 +345,7 @@ Mobile Stuff
 	.well {
 		background:none;
 		border:none;
+		box-shadow: none;
 	}
 
 }
