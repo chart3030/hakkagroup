@@ -342,6 +342,10 @@ Mobile Stuff
 	padding: 0em;
 	text-wrap:normal;
 	}
+	.well {
+		background:none;
+		border:none;
+	}
 
 }
 
