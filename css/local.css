@@ -112,7 +112,7 @@ HIDDEN NAV STYLES
 }
 
 .navbar-left-top ul li:last-child {
-	/*padding-right:0;*/
+	padding-right:140px;
 }
 
 .navbar-left-top ul li a:link,
@@ -400,6 +400,10 @@ Mobile Stuff
 .navbar-left-top ul li:first-child {
 	padding-left:0;
 }
+.navbar-left-top ul li:last-child {
+	padding-right:0;
+}
+
 	.page {}
 
 	.container {
